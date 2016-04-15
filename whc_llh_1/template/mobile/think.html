@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>谢谢</title>
+<link rel="stylesheet" type="text/css" href="../addons/whc_llh_1/template/css/index.css"/>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+<body style="background:#86101d;">
+<div class="con">
+<div class="content">
+    <div class="content_top_img">
+		<img src="../addons/whc_llh_1/template/image/top.jpg">
+    </div>
+	<div class="achieve">
+    	<?php echo $message; ?>
+    </div>
+    <div class="achieve_herf" style="text-align:center;">
+    	<a href="http://020.liyingkeji.com/app/index.php?i=47&c=entry&eid=601"><span style="font-size:70px;">参加活动</span></a>
+    </div>
+
+</div>
+</body>
+<script type="text/javascript">
+  $("#btn").click(function() {
+    window.location.href = "http://020.liyingkeji.com/app/index.php?i=47&c=entry&eid=607&recommendcode=" + $("#recommendcode").val();
+  });
+  wx.config({
+    debug: false,
+    appId: '<?php echo $signPackage["appId"];?>',
+    timestamp: <?php echo $signPackage["timestamp"];?>,
+    nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+    signature: '<?php echo $signPackage["signature"];?>',
+    jsApiList: [
+      'checkJsApi',
+      'onMenuShareTimeline',
+      'onMenuShareAppMessage',
+      'onMenuShareQQ',
+      'onMenuShareWeibo',
+      'onMenuShareQZone',
+      'hideMenuItems',
+      'showMenuItems',
+      'hideAllNonBaseMenuItem',
+      'showAllNonBaseMenuItem',
+      'translateVoice',
+      'startRecord',
+      'stopRecord',
+      'onVoiceRecordEnd',
+      'playVoice',
+      'onVoicePlayEnd',
+      'pauseVoice',
+      'stopVoice',
+      'uploadVoice',
+      'downloadVoice',
+      'chooseImage',
+      'previewImage',
+      'uploadImage',
+      'downloadImage',
+      'getNetworkType',
+      'openLocation',
+      'getLocation',
+      'hideOptionMenu',
+      'showOptionMenu',
+      'closeWindow',
+      'scanQRCode',
+      'chooseWXPay',
+      'openProductSpecificView',
+      'addCard',
+      'chooseCard',
+      'openCard'
+    ]
+  });
+  wx.ready(function () {
+    wx.hideOptionMenu();
+  });
+</script>
+</html>

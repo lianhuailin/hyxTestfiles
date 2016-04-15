@@ -1,0 +1,50 @@
+{template 'common/header'}
+
+<ul class="nav nav-tabs">
+	<li class="active"><a>兼职人员信息列表</a></li>
+</ul>
+	<div class="panel panel-default">
+		<div class="panel-heading">信息列表</div>
+		<div class="panel-body">
+			<div class="table-responsive panel-body">
+				<table class="table table-hover" style="min-width: 300px;">
+					<thead class="navbar-inner">
+						<tr>
+							<th style="width:120px;">用户昵称</th>
+							<th style="width:120px;">手机</th>
+							<th style="width:120px;">性别</th>
+							<th style="width:120px;">推荐码</th>
+							<th style="width:120px;">货币量(单位:元)</th>
+						</tr>
+					</thead>
+						{loop $parttimes $parttime}
+						<tr>
+							<td>{$parttime['nickname']}</td>
+							<td>{$parttime['mobile']}</td>
+							{if $parttime['sex']=='1'}
+								<td>男</td>
+							{else if $parttime['sex']=='0'}
+								<td>女</td>
+							{else}
+								<td>未知</td>
+							{/if}
+							<td style='color:red;'>{$parttime['recommends_code']}</td>
+							<td>{$parttime['current_money']}/{$parttime['total_money']}</td>
+						</tr>
+						{/loop}
+						{if empty($parttimes)}
+						<tr>
+							<td colspan="6">
+								没有兼职人员信息
+							</td>
+						</tr>
+						{/if}
+					</tbody>
+				</table>
+				{$pager}
+			</div>
+		</div>
+	</div>
+</div>
+
+{template 'common/footer'}

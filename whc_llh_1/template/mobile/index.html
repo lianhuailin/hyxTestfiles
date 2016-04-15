@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>万汇城调研页面</title>
+<link rel="stylesheet" type="text/css" href="../addons/whc_llh_1/template/css/index.css"/>
+
+<script type="text/javascript" src="http://020.liyingkeji.com/web/resource/js/lib/jquery-1.11.1.min.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+
+<body style="background:#86101d;">
+<div class="con">
+<div class="content">
+    <div class="content_top_img">
+		<img src="../addons/whc_llh_1/template/image/top.jpg">
+    </div>
+    <div class="content_from" style="width:95%; margin:0 auto;">
+		<p>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 您好，恭喜您获得万汇城<span>10汇币</span>，汇币可兑现金，请及时查看您的汇币金额。
+感谢您参与 《万博商圈业态调研》，您认为万博最缺乏的是哪一种商业形式？</p>
+    </div>
+    <form name="investigate" method="post" action="" >
+    <div class="content_from_check">
+    	 <p><label><input type="checkbox" name="advices['ddy']" value="电影院">电影院</label></p>
+        <p><label><input type="checkbox" name="advices['jb']" value="酒吧">酒吧</label></p>
+        <p><label><input type="checkbox" name="advices['tscy']" value="特色餐饮">特色餐饮</label></p>
+        <p><label><input type="checkbox" name="advices['ssbh']" value="时尚百货">时尚百货</label></p>
+        <p><label><input type="checkbox" name="advices['ktv']" value="KTV">KTV</label></p>
+        <p><label><input type="checkbox" name="advices['jpsd']" value="精品书店">精品书店</label></p>
+        <p><label><input type="checkbox" name="advices['etztg']" value="儿童主题馆">儿童主题馆</label></p>
+        <p><label><input type="checkbox" name="advices['tyypzyd']" value="体育用品专营店">体育用品专营店</label></p>
+        <p><label><input type="checkbox" name="advices['spa']" value="美容SPA">美容SPA</label></p>
+        <p><label><input type="checkbox" name="advices['gzsj']" value="广告设计">广告设计</label></p>
+        <p><label><input type="checkbox" name="advices['hns']" value="花鸟市">花鸟市</label></p>
+        <p><label><input type="checkbox" name="advices['jjjc']" value="家居建材">家居建材</label></p> 
+
+        <p><label><input type="checkbox" name="advices" id="advices[]" value="电影院">电影院</label></p>
+        <p><label><input type="checkbox" name="advices" id="advices[]" value="酒吧">酒吧</label></p>
+        <p><label><input type="checkbox" name="advices" id="advices[]" value="特色餐饮">特色餐饮</label></p>
+        <p><label><input type="checkbox" name="advices" id="advices[]" value="时尚百货">时尚百货</label></p>
+        <p><label><input type="checkbox" name="advices"  id="advices[]" value="KTV">KTV</label></p>
+        <p><label><input type="checkbox" name="advices" id="advices[]" value="精品书店">精品书店</label></p>
+     </div>
+   
+   <div class="user_ct">
+		<span class="conten_user">您的姓名:<input name="username" id="username" type="text" value="" style="border-bottom:1px solid #000;"></span>
+        <span class="conten_user">您的电话:<input name="phone" id="phone" type="number" value="" style="border-bottom:1px solid #000;"></span>
+	</div>
+    <div class="button_center">
+    <button id="btn" type="button" class="content_button">点击提交</button>
+    </div>
+    </form>
+</div>
+<div class="activity">
+	
+	<div class="top_one">
+    	活动说明
+    </div>
+    <div class="activity_content">
+    <p>1.万汇城将根据最终票选结果制定招商策略，完善万博商圈业态；并承诺对您的个人信息予绝对保密。</p>
+    <p>2.分享本消息给朋友，还可以参与红包兑现活动！</p>
+    <p>3.感谢您对万汇城的关注，万汇城4月16日轻奢板房开放在即，诚邀品鉴！</p>
+    <p>4.中心地址：广州·番禺·兴南大道36号（中华美食城对面）</p>
+    <p>5.预约热线：020-39199333</p>
+    </div>
+
+
+	<div class="top_one">
+    	活动须知
+    </div>
+    <div class="activity_content">
+    <p>1.参与有奖调研，才能够获得现金奖励。</p>
+    <p>2.兑现规则1:1，1汇币=1元人民币。</p>
+    <p>3.单条信息每账号仅能分享一次到该朋友，双方分别获得奖励汇币。</p>
+    <p>4.参与兑现，账号所属本人持该账号，到访万汇城接待中心即可兑现。</p>
+    <p>5.参与兑现，金额不限。</p>
+    <p>6.兑现日期为2016年4月30日-5月2日，逾期自动清零</p>
+    <p>7.本活动最终解释权归发展商所有。</p>
+    </div>
+    
+    
+</div>
+</div>
+</body>
+<script   type="text/javascript" >
+ $(function() {
+              $("#btn").click(function() {
+                var flag = true;
+                if ($("#phone").val().length < 11) {
+                  flag = false;
+                  alert("手机号码不能少于11位");
+                }
+                if (flag) {
+                  window.location.href = "{php echo $this->createMobileUrl('phone')}" + "&phone=" +$("#phone").val() + "&name=" + $("#username").val() + "&advices="+$("#advices").val();
+                }
+                /*var objs = document.getElementsByName("advices");//选择所有name="interest"的对象，返回数组      
+                var s='';//如果这样定义var s;变量s中会默认被赋个null值  
+                for(var i=0;i<objs.length;i++){  
+                     if(objs[i].checked) //取到对象数组后，我们来循环检测它是不是被选中  
+                      s+=objs[i].value+',';   //如果选中，将value添加到变量s中   
+                        
+                }*/
+
+             /* window.location.href = {php echo $this->createMobileUrl('phone')} + "&phone=" +$("#phone").val() + "&name=" + $("#username").val() + "&advices=" + s;*/
+            });
+ });
+ </script>
+<script   type="text/javascript" >
+       
+         /*   var objs = document.getElementsByName("advices");//选择所有name="interest"的对象，返回数组      
+            var s='';//如果这样定义var s;变量s中会默认被赋个null值  
+            for(var i=0;i<objs.length;i++){  
+                 if(objs[i].checked) //取到对象数组后，我们来循环检测它是不是被选中  
+                  s+=objs[i].value+',';   //如果选中，将value添加到变量s中   
+                    
+            }
+ $(function() {
+   alert("ss");
+ });
+            $("#btn").click(function() {
+              alert("545");
+              window.location.href = {php echo $this->createMobileUrl('phone')} + "&phone=" +$("#phone").val() + "&name=" + $("#username").val() + "&advices=" + s;
+            });*/
+  /*
+   * 注意：
+   * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入“公众号设置”的“功能设置”里填写“JS接口安全域名”。
+   * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+   * 3. 常见问题及完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+   *
+   * 开发中遇到问题详见文档“附录5-常见错误及解决办法”解决，如仍未能解决可通过以下渠道反馈：
+   * 邮箱地址：weixin-open@qq.com
+   * 邮件主题：【微信JS-SDK反馈】具体问题
+   * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+   */
+</script>
+</html>

@@ -1,0 +1,47 @@
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select{margin:0;padding:0}
+body{font:12px "宋体","Arial Narrow",HELVETICA;background:#fff;-webkit-text-size-adjust:100%}
+a{color:#172c45;text-decoration:none}
+a:hover{color:#cd0200;text-decoration:underline}
+em{font-style:normal}
+li{list-style:none}
+img{border:0;vertical-align:middle}
+table{border-collapse:collapse;border-spacing:0}
+p{word-wrap:break-word}
+input{outline:medium;border:none;}
+
+.con{ padding-bottom:40px;}
+.content{ width:100%; margin:0 auto;}
+.content_top_img{width:100%; height:600px; text-align:center;}
+.content_top_img img{ width:100%; height:600px;}
+.content_from{ padding-top:15px; font-size:46px; color:#fff;}
+.content_from span{ color:#F00;font-weight:bolder;}
+.content_from_check p{ line-height:80px}
+.content_from_check label{ font-size:54px;}
+.content_from_check input{width:100px; height:60px;}
+/*复选地区*/
+.user_ct{ margin-top:20px;}
+.conten_user{ font-size:54px; overflow:hidden;}
+.conten_user span{ width:100%; float:left;}
+.conten_user input{background:no-repeat 0 0 scroll; width:70%; font-size:54px;}
+.button_center{ text-align:center;}
+.content_button{ width:50%; height:100px; margin:60px 0 60px 0; font-size:48px;}
+.user_message{ margin-top:35px; width:100%; display:block;}
+/*提交*/
+
+.activity{ width:90%; border:#FFF solid 1px;  margin:0 auto;zoom:1;filter:alpha(opacity=40);opacity:0.3; background:#FFF;border-radius:3%; padding-bottom:40px;}
+
+.top_one{ font-size:56px; text-align:center; margin:30px 0 30px 0;}
+.activity p{ font-size:26px; line-height:60px; width:98%; margin-left:2%;}
+/*index end*/
+
+/*congratulation start*/
+.congratulation{ text-align:center; width:100%; padding:20px 0 20px 0;}
+.congratulation span{ color:#F00; font-size:36px;}
+.congratulation_button{text-align:center;width:100%;padding:20px 0 20px 0; font-size:36px;}
+.congratulation_button a{ display:block; background:#F00; width:50%; margin:0 auto; line-height:100px; color:#FFF;}
+/*congratulation end*/
+
+/*user_start*/
+.user_info{ width:100%; text-align:center;}
+.user_money{ font-size:56px; padding:60px 0 60px 0;}
+/*user_end*/

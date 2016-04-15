@@ -1,0 +1,37 @@
+{template 'common/header'}
+
+<ul class="nav nav-tabs">
+	<li class="active"><a>地区关注度</a></li>
+</ul>
+	<div class="panel panel-default">
+		<div class="panel-heading">地区关注度</div>
+		<div class="panel-body">
+			<div class="table-responsive panel-body">
+				<table class="table table-hover text-center" style="min-width: 300px;">
+					<thead class="navbar-inner">
+						<tr>
+							<th class=" text-center" style="width:50px;">地区</th>
+							<th class=" text-center" style="width:50px;">关注量</th>
+						</tr>
+					</thead>
+						{loop $attentionRate $region}
+						<tr>
+							<td>{$region['country']}{$region['province']}{$region['city']}</td>
+							<td>{$region['count']}</td>
+						</tr>
+						{/loop}
+						{if empty($attentionRate)}
+						<tr>
+							<td colspan="6">
+								没有信息
+							</td>
+						</tr>
+						{/if}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+{template 'common/footer'}

@@ -1,0 +1,65 @@
+{template 'common/header'}
+
+<ul class="nav nav-tabs">
+	<li class="active"><a>会员信息列表</a></li>
+</ul>
+	<div class="panel panel-default">
+		<div class="panel-heading">会员列表<div class="form-inline" style="float: right;"><input style="margin-left: 600px; width: 200px;" class="form-control" placeholder="搜索(手机号)" type="text" id="search" value=""></input></div></div>
+		<div class="panel-body">
+			<div class="table-responsive panel-body">
+				<table class="table table-hover" style="min-width: 300px;">
+					<thead class="navbar-inner">
+						<tr>
+							<th style="width:50px;">openid</th>
+							<th style="width:120px;">用户昵称</th>
+							<th style="width:120px;">手机</th>
+							<th style="width:120px;">性别</th>
+							<th style="width:120px;">地区</th>
+							<th style="width:120px;">货币量(单位:元)</th>
+						</tr>
+					</thead>
+						{loop $members $memberid $member}
+						<tr>
+							<td>{$member['openid']}</td>
+							<td>{$member['nickname']}</td>
+							<td>{$member['mobile']}</td>
+							{if $member['sex']=='1'}
+								<td>男</td>
+							{else if $member['sex']=='0'}
+								<td>女</td>
+							{else}
+								<td>未知</td>
+							{/if}
+							<td>{$member['country']}{$member['province']}{$member['city']}</td>
+							<td>{$member['current_money']}/{$member['total_money']}</td>
+						</tr>
+						{/loop}
+						{if empty($members)}
+						<tr>
+							<td colspan="6">
+								没有会员信息
+							</td>
+						</tr>
+						{/if}
+					</tbody>
+				</table>
+				{$pager}
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$("#search").change(function() {
+
+		$.ajax({
+		           type: "GET",
+		           url: "../addons/whc_llh_1/ajax_mobile.php",
+		           data: {mobile:$("#search").val()},
+		           dataType: "json",
+		           success: function(data){
+		                     alert(data);
+		          }
+	         });
+	});
+</script>
+{template 'common/footer'}

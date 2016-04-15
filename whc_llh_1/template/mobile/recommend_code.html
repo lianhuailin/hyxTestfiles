@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>填写推荐码</title>
+<link rel="stylesheet" type="text/css" href="../addons/whc_llh_1/template/css/index.css"/>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript" src="http://020.liyingkeji.com/web/resource/js/lib/jquery-1.11.1.min.js"></script>
+</head>
+
+<body style="background:#86101d;">
+<div class="con">
+<div class="content">
+    <div class="content_top_img">
+		<img src="../addons/whc_llh_1/template/image/top.jpg">
+    </div>
+    <div class="part_sj">
+    	请输入员工推荐码:
+    </div>
+    <div class="part_top_number">
+    <form name="part_tj" method="post" action="">
+    	<input id="recommendcode" type="number" name="" class="part_tj_number">
+        <p><button id="btn" type="button" class="part_tj_button">确认</button></p>
+    </form>
+    </div>
+<div class="activity">
+	
+	<div class="top_one">
+    	活动说明
+    </div>
+    <div class="activity_content">
+    <p>1.万汇城将根据最终票选结果制定招商策略，完善万博商圈业态；并承诺对您的个人信息予绝对保密。</p>
+    <p>2.分享本消息给朋友，还可以参与红包兑现活动！</p>
+    <p>3.感谢您对万汇城的关注，万汇城4月16日轻奢板房开放在即，诚邀品鉴！</p>
+    <p>4.中心地址：广州·番禺·兴南大道36号（中华美食城对面）</p>
+    <p>5.预约热线：020-39199333</p>
+    </div>
+
+
+	<div class="top_one">
+    	活动须知
+    </div>
+    <div class="activity_content">
+    <p>1.参与有奖调研，才能够获得现金奖励。</p>
+    <p>2.兑现规则1:1，1汇币=1元人民币。</p>
+    <p>3.客户兑现须手机号与微信号同时核准。</p>
+    <p>4.单条信息每账号仅能分享一次到该朋友，双方分别获得奖励汇币。</p>
+    <p>5.参与兑现，账号所属本人持该账号，到访万汇城接待中心即可兑现。</p>
+    <p>6.参与兑现，金额不限。</p>
+    <p>7.兑现日期为2016年4月30日-5月2日，逾期自动清零</p>
+    <p>8.发展商有权因应市场活跃程度随时终止活动，但已参加活动客户仍可参与兑现。</p>
+    <p>9.本活动最终解释权归发展商所有。</p>
+    </div>
+    
+    
+</div>
+</div>
+</body>
+<script type="text/javascript">
+  $(function() {
+     $("#btn").click(function() {
+     if ($("#recommendcode").val() == "") {
+      alert("请输入推荐码");
+    } else {
+      window.location.href = "http://020.liyingkeji.com/app/index.php?i=47&c=entry&eid=607&recommendcode=" + $("#recommendcode").val();
+    }
+  });
+  });
+</script>
+<script type="text/javascript">
+ 
+</script>
+</html>
